@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Trello Booster",
+  "short_name": "Trebooster",
+  "description": "Boost trello",
+  "version": "1.0.0",
+  "permissions": ["tabs", "https://trello.com/*"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://trello.com/*"],
+      "run_at": "document_idle",
+      "css": ["trello-booster.css"]
+    }
+  ]
+}
